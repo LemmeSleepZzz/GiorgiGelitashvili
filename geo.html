@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorgi's Site</title>
+    <style>
+        body{
+            background-color:  rgb(29, 3, 64);
+            background-repeat: repeat-y;
+            margin: 0;
+            padding:0;
+        }
+          ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track{
+            background: rgb(212, 0, 255);
+        }
+        ::-webkit-scrollbar-thumb{
+            background: rgb(29, 4, 95);
+        }
+        *{
+              
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+          html{
+            scroll-behavior:smooth !important;
+        }
+
+         canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .header{
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .home{
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            padding: 8px;
+            text-decoration: none;
+            color: rgb(252, 255, 72);;
+        
+        }
+        
+        .ab{
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            padding: 8px;
+            text-decoration: none;
+            color: rgb(252, 255, 72);;
+        
+        }
+
+        .con{
+        
+        font-family: 'Manrope', sans-serif;
+        font-size: 21px;
+        padding: 8px;
+        text-decoration: none;
+        color: rgb(252, 255, 72);;
+        border: 3px;
+        border-style: solid;
+        border-color: rgb(252, 255, 72);
+        border-radius: 0px;
+        }
+
+    section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 100px;
+            color: rgb(252, 255, 72);
+        }
+
+    .content{
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+        }
+    .main-title{
+            font-family: 'Varela Round', sans-serif;
+            font-size: 4em;
+        
+        }
+        
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 100px;
+            color: rgb(252, 255, 72);
+        }
+
+        .content {
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .main-title {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 4em;
+        }
+
+        .container {
+            position: relative;
+            width: 1150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 70px;
+        }
+
+        .container .image {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .container .image img {
+            position: absolute;
+            z-index: 111;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 3em;
+        }
+
+        .container .textbox {
+            font-family: 'Varela Round', sans-serif;
+            z-index: 222;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 7px;
+            padding: 50px;
+            max-width: 800px;
+            margin-top: 10px;
+        }
+
+        .name{
+            font-size: 35px;
+            color: rgb(174, 110, 235);
+            text-decoration: none;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:"wdith" 100;
+
+        }
+    </style>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="background.js"></script>
+
+
+    <!-- dziritadi -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="cssia.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+      <!--saxelis font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Lato:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <header class="header">
+        <a href="" class="name">Giorgi</a>
+    
+    <nav class="navbar">
+        <a href="index.html" class="home">Home</a>
+        <a href="Test.html" class="ab">Tbilisi</a>
+        <a href="geo.html" class="con">Saqartvelo</a>
+    </nav>
+</header>
+
+<section class="sec-2">
+    <div class="content" id="about">
+    <h1 class="main-title" >საქართველო</h3>
+        <div class="container">
+            <div class="image"><img src="images.png" alt="foto linuxidan"></div>
+            <div class="textbox">
+                
+                <p>სახელმწიფო ევრაზიაში, კავკასიაში, შავი ზღვის აღმოსავლეთ სანაპიროზე. ესაზღვრება ჩრდილოეთიდან რუსეთი, სამხრეთიდან თურქეთი და სომხეთი, და სამხრეთ-აღმოსავლეთიდან აზერბაიჯანი. ტრანსკონტინენტური ქვეყანა სამხრეთ-აღმოსავლეთ ევროპისა და დასავლეთ აზიის გასაყარზე მდებარეობს, თუმცა სოციოპოლიტიკურად და კულტურულად ევროპის ნაწილია.</p>
+                    <br>
+                <p>თანამედროვე საქართველოს ტერიტორია მუდმივად დასახლებული იყო ადრეული ქვის ხანიდან მოყოლებული. კლასიკურ ანტიკურ ხანაში აყვავდა ადრეული ქართული სახელმწიფოები კოლხეთის სამეფო და იბერია, რამაც დასაბამი მისცა საერთო ქართულ კულტურასა და სახელმწიფოებრიობას. ქრისტიანობა გაბატონდა ადრეული IV საუკუნიდან; ქვეყანა გაერთიანებული მონარქია გახდა 1008 წელს. თუმცა მას შემდეგ საქართველომ აღორძინებისა და დაცემის რამდენიმე პერიოდი განვლო, სანამ XV საუკუნეში რამდენიმე მცირე პოლიტიკურ ერთეულად დაიშლებოდა. იმპერიულმა რუსეთმა ქართული მიწები ნაწილ-ნაწილ დაიპყრო 1801–1878 წლებში. რუსეთის რევოლუციის შემდგომ აღდგენილი დამოუკიდებელი ქვეყანა — საქართველოს დემოკრატიული რესპუბლიკა (1918–1921) ბოლშევიკების მსხვერპლი გახდა და 1922 წლიდან საბჭოთა კავშირის ნაწილად იქცა.</p>
+                    <br>
+                <p>საქართველომ დამოუკიდებლობა 1991 წელს კვლავ მოიპოვა. სამოქალაქო ომისა და მკაცრი ეკონომიკური კრიზისით გამოწვეული ქაოსური პერიოდის შემდეგ ქვეყანა შედარებით სტაბილური გახდა 1990-იანი წლების ბოლოს. 2003 წელს მოხდა „ვარდების რევოლუცია“. საქართველოს მთავრობის მისწრაფება ნატოში გაწევრიანებასა და გამოყოფილი ტერიტორიების დაბრუნებისკენ რუსეთთან ურთიერთობას მკვეთრად აუარესებს. პარალელურად მიმდინარე სწრაფმა ეკონომიკურმა განვითარებამ ქვეყანა მნიშვნელოვანი ევრაზიული ენერგეტიკული პროექტების ეპიცენტრი გახადა.</p>
+                    <br>
+                   <p>საქართველო წარმომადგენლობითი დემოკრატიაა, ორგანიზებული როგორც უნიტარული, საპარლამენტო რესპუბლიკა. ქვეყანა ამჟამად რამდენიმე საერთაშორისო ორგანიზაციის წევრია, მათ შორის გაეროს (31 ივლისი, 1992)[9], ევროპის საბჭოს (27 აპრილი, 1999), სუამის, მსოფლიო სავაჭრო ორგანიზაციისა და შავი ზღვის ეკონომიკური თანამშრომლობის. საქართველო ასევე მიისწრაფვის ევროპის კავშირში ინტეგრაციასა და ჩრდილოატლანტიკურ ალიანსში გაწევრიანებას.
+                </p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    ScrollReveal({ 
+        reset: true, 
+        distance: '60px',
+        duration: 2000,
+        delay: 200,
+    });
+
+    ScrollReveal().reveal('.main-title', { delay: 200, origin: 'top' });
+    ScrollReveal().reveal('.image', { delay: 200, origin: 'right' });
+    ScrollReveal().reveal('.textbox', { delay: 200, origin: 'left' });
+
+    const canvas = document.getElementById('backgroundCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let width, height;
+    let lines = [];
+
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+
+    function init() {
+        resize();
+        lines = [];
+
+        for (let i = 0; i < 100; i++) {
+            lines.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                dx: (Math.random() - 0.5) * 2,
+                dy: (Math.random() - 0.5) * 2,
+                length: Math.random() * 100 + 50
+            });
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.strokeStyle = 'rgba(252, 255, 72, 0.5)';
+
+        lines.forEach(line => {
+            ctx.beginPath();
+            ctx.moveTo(line.x, line.y);
+            ctx.lineTo(line.x + line.dx * line.length, line.y + line.dy * line.length);
+            ctx.stroke();
+        });
+    }
+
+    function update() {
+        lines.forEach(line => {
+            line.x += line.dx;
+            line.y += line.dy;
+
+            if (line.x < 0 || line.x > width || line.y < 0 || line.y > height) {
+                line.x = Math.random() * width;
+                line.y = Math.random() * height;
+            }
+        });
+    }
+
+    function animate() {
+        draw();
+        update();
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', resize);
+    init();
+    animate();
+
+</script>
+</body>
+</html>

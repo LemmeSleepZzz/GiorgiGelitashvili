@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track{
+            background: rgb(5, 5, 5);
+        }
+        ::-webkit-scrollbar-thumb{
+            background: rgb(129, 1, 1);
+        }
+
+        *{
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html{
+            scroll-behavior:smooth !important;
+        }
+        body{
+            
+            background-color:  rgb(0, 0, 0);
+            background-repeat: repeat-y;
+        }
+        
+        .header{
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        
+        .pro{
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            padding: 8px;
+            text-decoration: none;
+            color: rgb(180, 3, 3);
+        }
+        
+        .ab{
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            padding: 8px;
+            text-decoration: none;
+            color: rgb(180, 3, 3);
+        
+        }
+        
+        .home{
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            padding: 8px;
+            text-decoration: none;
+            color: rgb(180, 3, 3);
+        
+        }
+        .con{
+        
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            padding: 8px;
+            text-decoration: none;
+            color: rgb(180, 3, 3);
+            border: 3px;
+            border-style: solid;
+            border-color: rgbrgb(180, 3, 3);
+            border-radius: 0px;
+        }
+        
+        .name{
+            font-size: 35px;
+            color: rgb(241, 122, 122);
+            text-decoration: none;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:"wdith" 100;
+
+        }
+        
+        .back{
+            max-width: 100%;
+            max-height: 1200px;
+            overflow: hidden;
+        }
+        
+        
+        section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 100px;
+            color: rgb(180, 3, 3);
+        }
+        .content{
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+        }
+        .main-title{
+            font-family: 'Varela Round', sans-serif;
+            font-size: 4em;
+            margin-bottom: 50px;
+        }
+        
+        .container{
+            position: relative;
+            width: 1150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container .image{
+            position: relative;
+            width: 800px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .container .image img{
+            position: absolute;
+            z-index: 111;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .container .textbox{
+            font-family: 'Varela Round', sans-serif;
+            z-index: 222;
+            background-color: rgba(255, 255, 255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 7px;
+            padding: 40px;
+            max-width: 400px;
+            transform: translate(-80px,50px);
+        }
+        
+        .container .textbox h2{
+            font-family: 'Varela Round', sans-serif;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .sec-02{
+            margin-top: 350px;
+        }
+        
+        .icons{
+            font-family: 'Nunito', sans-serif;
+            width: 400px;
+            margin-left: 50px;
+        }
+        
+        .icons li{
+            font-family: 'Nunito', sans-serif;
+            list-style: none;
+            font-size: 1.4em;
+        }
+        
+        .icons li a{
+            color: rgb(180, 3, 3);
+            text-decoration: none;
+        
+        }
+        
+        .icons li:not(:last-child){
+            margin-bottom: 50px;
+        }
+        
+        .icons li:nth-child(1), .icons li:nth-child(3){
+            padding-left: 100px;
+        }
+        
+        .icons li:nth-child(2), .icons li:nth-child(2){
+            padding-left: 50px;
+        }
+        
+        .contacts{
+            margin-bottom: 250px;
+            margin-top: 100px;
+        }
+        .wiki{
+            text-decoration: none;
+            color: rgb(240, 79, 79);
+        }
+        :hover.wiki{
+            text-decoration: underline;
+        }
+        .hr {
+            background-color: rgb(180, 3, 3);
+            width: 100%;
+            height: 3px;
+            border: none; /* Remove default border */
+            margin: 0; /* Adjust margin as needed */
+            padding: 0; /* Adjust padding as needed */
+        }
+
+        </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--dziritadi-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="cssia.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorgi's Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+    <!--for Name tag-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Lato:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!--textistvis da suratebistvis-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+    <body>
+        <canvas id="backgroundCanvas"></canvas>
+        <header class="header">
+            <a href="" class="name">Giorgi</a>
+        
+        <nav class="navbar">
+            <a href="index.html" class="home">Home</a>
+            <a href="Test.html" class="ab">Tbilisi</a>
+            <a href="geo.html" class="con">Saqartvelo</a>
+        </nav>
+    </header>
+    <section class="sec-1">
+    <div class="content"><h1 class="main-title" id="home">გამარჯობა</h1>
+        <div class="container">
+        <div class="image"><img src="car1.png" alt="kata"></div>
+            <div class="textbox">
+                <h2>მე ვარ გიორგი</h2>
+                <p>
+                    ეს არის ჩემი პირველი ვებსაიტი,სადაც პატარა მიმოხილვას გავაკეთებ ჩემს შესახებ.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="sec-2">
+        <div class="content" id="about">
+        <h1 class="main-title" >დავიწყოთ!</h3>
+            <div class="container">
+                <div class="image"><img src="abt.jfif" alt="foto linuxidan"></div>
+                <div class="textbox">
+                    <h2>ჩემს შესახებ</h2>
+                    <p>მე მქვია გიორგი. ვარ 19 წლის ვცხოვრობ <a class="wiki" href="Test.html">თბილსში</a>. გამოცდილება არ მაქვს ამ სფეროსთან მაგრამ ვთვლი რომ საკმაოდ საინტერესოა. ამიტომაც ჩემი პირველი საიტი შევქმენი, სადაც ვისაუბრებ <a class="wiki" href="Test.html">თბილსსა</a> და ზოგადად <a class="wiki" href="geo.html">საქართველოზე</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="content">
+            <hr class="hr">
+            <br><br><br>
+            <h1 class="main-title">ინფორმაციისთვის გთხოვთ გამოიყენოთ ზემოთ ნაჩვენები  Hyperlink-ები</h1>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <script>
+            ScrollReveal({ 
+                reset: true, 
+                distance: '60px',
+                duration: 2500,
+                delay: 400,
+            });
+
+            ScrollReveal().reveal('.main-title', { delay: 500, origin: 'left' });
+            ScrollReveal().reveal('.image', { delay: 600, origin: 'bottom' });
+            ScrollReveal().reveal('.textbox', { delay: 700, origin: 'right' });
+            ScrollReveal().reveal('.main-title', { delay: 500, origin: 'left' });
+            ScrollReveal().reveal('.icons i', { delay: 500, origin: 'left',interval: 200});
+            
+        </script>
+    </body>
+</html>
